@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sonushaikazurefile 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sonushaikazurefile
+  template:
+    metadata:
+      labels:
+        app: sonushaikazurefile 
+    spec:
+      containers:
+        - name: sonushaikazurefile 
+          image: aksregistry122.azurecr.io/sonushaikazurefile
+          ports:
+          - containerPort: 80
